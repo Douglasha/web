@@ -1,4 +1,5 @@
 import { Input } from "../components/Input.tsx"
+import { Button } from "../components/Button.tsx"
 
 export function SignIn() {
   return (
@@ -17,6 +18,8 @@ export function SignIn() {
         type="password"
         placeholder="123456"
       />
+
+      <Button>Entrar</Button>
 
     </form>
   )
