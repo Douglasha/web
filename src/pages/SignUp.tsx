@@ -12,7 +12,8 @@ export function SignUP() {
   function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     alert("Formulário enviado")
-    console.log({ name, email, password, passwordConfirm })
+    console.log( name, email, password, passwordConfirm )
+    setIsLoading(false)
   }
   return (
     <form onSubmit={onSubmit} className="w-full flex flex-col gap-4">

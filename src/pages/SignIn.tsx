@@ -10,7 +10,8 @@ export function SignIn() {
   function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     alert("Formulário enviado")
-    console.log({ email, password })
+    console.log( email, password )
+    setIsLoading(false)
   }
   return (
     <form onSubmit={onSubmit} className="w-full flex flex-col gap-4">
