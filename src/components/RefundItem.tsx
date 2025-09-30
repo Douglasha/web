@@ -13,7 +13,7 @@ type Props = React.ComponentProps<"a"> & {
 export function RefundItem({ data, ...rest }: Props) {
   return (
     <a
-      className="flex items-center gap-3 hover:bg-green-100/50 cursor-pointer rounded-md p-2"
+      className="flex items-center gap-3 hover:bg-green-100/30 transition ease-linear cursor-pointer rounded-md p-2"
       {...rest}
     >
       <img
