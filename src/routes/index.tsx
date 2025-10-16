@@ -6,15 +6,32 @@ import { AuthRoutes } from "./AuthRoutes.tsx";
 import { ManagerRoutes } from "./ManagerRoutes.tsx";
 import { EmployeeRoutes } from "./EmployeeRoutes.tsx";
 
-const isLoading = true; // TODO: replace with actual loading state
+const isLoading = false; // TODO: replace with actual loading state
+
+const session = {
+  user: {
+    role: "employee",
+  },
+};
 
 export function Routes() {
+  function Route() {
+    switch (session.user.role) {
+      case "manager":
+        return <ManagerRoutes />;
+      case "employee":
+        return <EmployeeRoutes />;
+      default:
+        return <AuthRoutes />;
+    }
+  }
+
   if (isLoading) {
     return <Loading />;
   }
   return (
     <BrowserRouter>
-      <AuthRoutes />
+      <Route />
     </BrowserRouter>
   );
 }
