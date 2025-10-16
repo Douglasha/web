@@ -10,7 +10,7 @@ const isLoading = false; // TODO: replace with actual loading state
 
 const session = {
   user: {
-    role: "employee",
+    role: "",
   },
 };
 
