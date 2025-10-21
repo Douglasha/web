@@ -8,20 +8,13 @@ import { AuthRoutes } from "./AuthRoutes.tsx";
 import { ManagerRoutes } from "./ManagerRoutes.tsx";
 import { EmployeeRoutes } from "./EmployeeRoutes.tsx";
 
-const isLoading = false; // TODO: replace with actual loading state
-
-const session = {
-  user: {
-    role: "",
-  },
-};
+const isLoading = false;
 
 export function Routes() {
-  const context = useAuth();
-  console.log(context);
+  const { session } = useAuth();
 
   function Route() {
-    switch (session.user.role) {
+    switch (session?.user.role) {
       case "manager":
         return <ManagerRoutes />;
       case "employee":
