@@ -7,7 +7,6 @@ import { api } from "../services/api.ts";
 
 import { Input } from "../components/Input.tsx";
 import { Button } from "../components/Button.tsx";
-import { fi } from "zod/locales";
 
 const signUpSchema = z
   .object({
