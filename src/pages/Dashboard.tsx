@@ -14,7 +14,7 @@ import { RefundItem } from "../components/RefundItem";
 import type { RefundItemProps } from "../components/RefundItem";
 import { set } from "zod";
 
-const PER_PAGE = 5;
+const PER_PAGE = 1;
 
 export function Dashboard() {
   const [name, setName] = useState("");
